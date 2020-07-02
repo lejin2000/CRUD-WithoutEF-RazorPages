@@ -1,0 +1,27 @@
+﻿@page
+@model CRUD_WithoutEF_RazorPages.Pages.AddModel
+@{
+    ViewData["Title"] = "Add";
+}
+@using CRUD_WithoutEF_RazorPages.Models;
+
+<h1>Add new employee</h1>
+<hr />
+<form method="post">
+    <table class="table">
+        <tr>
+            <th>Employee name : <input type="text" name="Empname"  placeholder="Enter employee name" /></th>
+        </tr>
+        <tr>
+            <th>Employee email : <input type="email" name="Email"  placeholder="Enter employee emai" /></th>
+        </tr>
+        <tr>
+            <th>Employee age : <input type="number" name="Age"  placeholder="Enter employee age" /></th>
+        </tr>
+        <tr>
+            <th>Employee salary : <input type="number"  step=".01" name="Salary"   placeholder="Enter employee salary" /></th>
+        </tr>
+    </table>
+    <input type="submit" value="Add" />
+    <a asp-page="Index">Back to list</a>
+</form>

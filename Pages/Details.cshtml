@@ -1,0 +1,27 @@
+﻿@page 
+@model CRUD_WithoutEF_RazorPages.Pages.DetailsModel
+@using CRUD_WithoutEF_RazorPages.Models; 
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details pages</h1>
+<table class="table">
+    <tr>
+        <th>Employee id : @Html.DisplayFor(Model => Model.DisplayRecords.Empid)</th>
+    </tr>
+    <tr>
+        <th>Employee name : @Html.DisplayFor(Model => Model.DisplayRecords.Empname)</th>
+    </tr>
+    <tr>
+        <th>Employee email : @Html.DisplayFor(Model => Model.DisplayRecords.Email)</th>
+    </tr>
+    <tr>
+        <th>Employee age : @Html.DisplayFor(Model => Model.DisplayRecords.Age)</th>
+    </tr>
+    <tr>
+        <th>Employee salary : @Html.DisplayFor(Model => Model.DisplayRecords.Salary)</th>
+    </tr>
+</table>
+<a asp-page="Index">Back to list</a>
+

@@ -1,0 +1,30 @@
+﻿@page
+@model CRUD_WithoutEF_RazorPages.Pages.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+@using CRUD_WithoutEF_RazorPages.Models;
+
+<h1>Edit employee details</h1>
+<hr />
+<form method="post">
+    <table class="table">
+        <tr>
+            <th>Employee id : @Html.DisplayFor(Model => Model.DisplayRecords.Empid)</th>
+        </tr>
+        <tr>
+            <th>Employee name : <input type="text" asp-for="DisplayRecords.Empname" placeholder="Enter employee name" /></th>
+        </tr>
+        <tr>
+            <th>Employee email : <input type="email" asp-for="DisplayRecords.Email" placeholder="Enter employee emai" /></th>
+        </tr>
+        <tr>
+            <th>Employee age : <input type="number" asp-for="DisplayRecords.Age" placeholder="Enter employee age" /></th>
+        </tr>
+        <tr>
+            <th>Employee salary : <input type="number" step=".01" asp-for="DisplayRecords.Salary" placeholder="Enter employee salary" /></th>
+        </tr>
+    </table>
+    <input type="submit" value="Edit" />
+    <a asp-page="Index">Back to list</a>
+</form>

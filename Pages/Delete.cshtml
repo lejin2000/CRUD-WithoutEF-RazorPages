@@ -1,0 +1,14 @@
+﻿@page
+@model CRUD_WithoutEF_RazorPages.Pages.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+@using CRUD_WithoutEF_RazorPages.Models; 
+
+<h1>Delete employee</h1>
+<hr />
+<h4>Are you sure you want to delete this employee? <b> @Html.DisplayFor(Model => Model.DisplayRecords.Empid) : @Html.DisplayFor(Model => Model.DisplayRecords.Empname)</b></h4>
+<form method="post">
+    <input type="submit" value="Delete" />
+    <a asp-page="Index">Back to list</a>
+</form>
